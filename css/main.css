@@ -1,0 +1,180 @@
+/* ===========================
+   COLOR PALETTE
+   =========================== */
+
+:root {
+    --bg: #f7f8fc; /* soft light background */
+    --text: #2d2d2d; /* dark gray text */
+    --muted: #555; /* softer gray */
+    --purple: #a78bfa; /* soft lavender */
+    --purple-dark: #7c5dfa; /* deeper lavender */
+    --blue: #60a5fa; /* soft blue */
+    --card-bg: #ffffff; /* white cards */
+    --border: #e5e7eb; /* light border */
+    --font: "Poppins", sans-serif;
+}
+
+/* ===========================
+   GLOBAL
+   =========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    line-height: 1.7;
+}
+
+/* ===========================
+   NAVBAR
+   =========================== */
+
+.top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffffcc;
+    backdrop-filter: blur(10px);
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+    .top-nav nav {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .top-nav a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+        transition: 0.2s ease;
+    }
+
+        .top-nav a:hover {
+            color: var(--purple-dark);
+        }
+
+/* ===========================
+   HERO
+   =========================== */
+
+.hero {
+    text-align: center;
+    padding: 4rem 10% 3rem;
+}
+
+.profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--purple);
+    box-shadow: 0 4px 20px rgba(167, 139, 250, 0.25);
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--purple-dark);
+}
+
+.hero h2 {
+    font-size: 1.2rem;
+    color: var(--blue);
+    margin-top: 0.4rem;
+}
+
+.hero p {
+    max-width: 40rem;
+    margin: 1rem auto;
+    color: var(--muted);
+}
+
+/* ===========================
+   SECTIONS
+   =========================== */
+
+.section {
+    padding: 3rem 10%;
+}
+
+    .section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: var(--purple-dark);
+    }
+
+    .section p,
+    .section li {
+        color: var(--muted);
+        font-size: 1rem;
+    }
+
+    .section ul {
+        padding-left: 1.2rem;
+        margin-top: 0.5rem;
+    }
+
+    .section li {
+        margin-bottom: 0.4rem;
+    }
+
+/* ===========================
+   SKILLS GRID
+   =========================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+    .skills-grid h3 {
+        color: var(--purple);
+        margin-bottom: 0.5rem;
+    }
+
+/* ===========================
+   PROJECT CARDS
+   =========================== */
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    transition: 0.25s ease;
+}
+
+    .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        border-color: var(--purple);
+    }
+
+    .project-card h3 {
+        color: var(--purple-dark);
+        margin-bottom: 0.5rem;
+    }
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 800px) {
+    .section {
+        padding: 2.5rem 7%;
+    }
+}
